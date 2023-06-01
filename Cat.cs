@@ -48,11 +48,11 @@ namespace CatNamespace {
 
         public CatContext() {
 			//this.Icon = Icon.ExtractAssociatedIcon("cat.ico");
-			Console.WriteLine("Reflection Location "+System.Reflection.Assembly.GetExecutingAssembly().Location);
+			//Console.WriteLine("Reflection Location "+System.Reflection.Assembly.GetExecutingAssembly().Location);
 			this.Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetExecutingAssembly().Location);
 			trayIcon = new NotifyIcon();
 			trayIcon.Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetExecutingAssembly().Location);
-			trayIcon.Text = appTitle;
+			trayIcon.Text = appTitle+build;
 			trayIcon.ContextMenu = new ContextMenu();
 			trayIcon.Visible = true;
 			//trayIcon.ContextMenu.MenuItems.Add(new MenuItem("Option 1", new EventHandler(handler_method)));
